@@ -1,0 +1,21 @@
+// REGULAR
+@font-face {
+  font-family: "IBMPlexMono-Regular";
+  src: url("../assets/fonts/IBMPlexMono-Regular.ttf");
+}
+
+// LIGHT
+@font-face {
+  font-family: "IBMPlexMono-Light";
+  src: url("../assets/fonts/IBMPlexMono-Light.ttf");
+}
+
+// BOLD
+@font-face {
+  font-family: "IBMPlexMono-Bold";
+  src: url("../assets/fonts/IBMPlexMono-Bold.ttf");
+}
+
+$font-regular: "IBMPlexMono-Regular";
+$font-light: "IBMPlexMono-Light";
+$font-bold: "IBMPlexMono-Bold";
