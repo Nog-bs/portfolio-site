@@ -7,7 +7,36 @@
   height: 100vh;
 
   &__contact {
+    display: flex;
+    align-items: center;
     margin-top: 24px;
+    position: absolute;
+    bottom: 150px;
+
+    &-link {
+      text-decoration: none;
+      color: black;
+    }
+
+    &-icon {
+      height: 50px;
+      width: 50px;
+      margin-right: 24px;
+    }
+
+    &-download {
+      text-decoration: none;
+      margin-top: 12px;
+      background-color: rgba(255, 255, 51, 0.5);
+      color: white;
+      padding: 16px;
+      position: relative;
+      bottom: 8px;
+
+      &:focus {
+        outline: black solid 2px;
+      }
+    }
   }
 
   &__head {

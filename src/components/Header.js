@@ -1,6 +1,10 @@
 // MODULES AND LIBRARIES
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { SiLinkedin } from "react-icons/si";
+import { SiInstagram } from "react-icons/si";
+import { VscGithub } from "react-icons/vsc";
+// ASSETS
+import resume from "../assets/download/edro-resume.pdf";
 
 // STYLING
 import "../styles/HomePage.scss";
@@ -33,13 +37,34 @@ const Header = () => {
           <h5 className="home__head-develop">Developer</h5>
         </div>
         <p onClick={handleContact} to="/contact" className="home__head-button">
-          Contact
+          {contact ? "Hide" : "Contact"}
         </p>
         {contact && (
           <div className="home__contact">
-            <h5 className="home__contact-head">
-              Feel free to contact me through:
-            </h5>
+            <a
+              href="https://www.linkedin.com/in/edrogonzales/"
+              target="_blank"
+              className="home__contact-link"
+            >
+              <SiLinkedin className="home__contact-icon" />
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/Nog-bs"
+              className="home__contact-link"
+            >
+              <VscGithub className="home__contact-icon" />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/nog.e/"
+              className="home__contact-link"
+            >
+              <SiInstagram className="home__contact-icon" />
+            </a>
+            <a className="home__contact-download" href={resume} download>
+              Download Resume
+            </a>
           </div>
         )}
       </div>
