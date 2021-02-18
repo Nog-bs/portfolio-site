@@ -1,94 +1,89 @@
 // MODULES AND LIBRARIES
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import HoverVideoPlayer from "react-hover-video-player";
 // COMPONENTS
 import { Header } from "../components";
 // STYLE
 import "../styles/CodingPage.scss";
+// ASSETS
+import resume from "../assets/download/edro-resume.pdf";
+import websitePreview from "../assets/videos/happy-bonsai-trim.mp4";
+import amayPreview from "../assets/videos/amay-sweets-trim.mp4";
 
-const DancingPage = () => {
+const CodingPage = () => {
+  const websiteRef = useRef();
+  const amayRef = useRef();
   return (
-    <section className="dancing">
-      <Link to="/" className="dancing__return">
+    <section className="coding">
+      <Link to="/" className="coding__return">
         Go Back
       </Link>
       <Header />
-      <div id="style-3" className="dancing__section">
-        <h2 className="dancing__section-head">Choreographer & Battler</h2>
-        <div className="dancing__section-experience">
-          <h3 className="experience__head">
-            Choreography Experience [2013 - Present]
-          </h3>
+      <div id="style-3" className="coding__section">
+        <h2 className="coding__section-head">Full Stack Developer</h2>
+        <a className="coding__download" href={resume} download>
+          Download Resume
+        </a>
+        <div className="coding__section-experience">
+          <h3 className="experience__head">Education</h3>
           <ul className="experience__list">
             <li className="experience__list-item">
-              [2016 - 2020] Co-Director of Epiphany (Now known as Emanate)
+              [Nov 2020 - Feb 2021] BrainStation | Web Development Diploma
             </li>
             <li className="experience__list-item">
-              [2018 - 2019] Rare Candies Choreographer
-            </li>
-            <li className="experience__list-item">
-              [2016 - 2018] Oblivious Dance Company
+              [Sept 2018 – Aug 2020] Simon Fraser University | Bachelor of
+              Commerce
             </li>
           </ul>
         </div>
-        <div className="dancing__section-experience">
-          <h3 className="experience__head">
-            Street-Dance/Battle Experience [2018 - Present]
-          </h3>
-          <ul className="experience__list">
-            <p className="experience__list-styles">
-              Dance styles: Popping [2 years], Hip hop [2 years], Waacking [1
-              year], House [1 year]
-            </p>
-            <li className="experience__list-item">
-              [2018 - 2020] Founder of Level Up All-Styles Company
-            </li>
-          </ul>
-        </div>
-        <div className="dancing__section-projects">
+        <div className="coding__section-projects">
           <h3 className="projects__head">Projects</h3>
           <div className="project__item">
-            <h4 className="project__item-head">[2019] 1985 Choreography</h4>
+            <h4 className="project__item-head">[Jan 2021] Happy Bonsai</h4>
             <p className="project__item-description">
-              My first self choreographed video production
+              Full Stack application utilizing: Firebase Authentication &
+              Realtime Database, Axios, Google Books API, Three.js,
+              React-Three-Fiber
             </p>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/s9WUAFoSSeI"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <div ref={websiteRef} className="project__item-video">
+              <HoverVideoPlayer
+                videoSrc={websitePreview}
+                hoverTargetRef={websiteRef}
+                loop={true}
+                videoClassName="player-video"
+                videoStyle={{ height: "100%" }}
+              />
+            </div>
+            <a
+              className="project__item-link"
+              target="_blank"
+              href="https://happy-bonsai.netlify.app/"
+            >
+              Go to site
+            </a>
           </div>
           <div className="project__item">
-            <h4 className="project__item-head">[2017] Rare Candies</h4>
+            <h4 className="project__item-head">[Dec 2020] Amay Sweets</h4>
             <p className="project__item-description">
-              Had the honour of joining this team for UBC's biggest talent
-              showcase
+              Gallery website to display local business products
             </p>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/-g3C7o6yzF0"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div className="project__item">
-            <h4 className="project__item-head">[2016] Oblivious</h4>
-            <p className="project__item-description">
-              International Competition in San Francisco, California
-            </p>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/1y2O4QVNwfw"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <div ref={amayRef} className="project__item-video">
+              <HoverVideoPlayer
+                videoSrc={amayPreview}
+                hoverTargetRef={amayRef}
+                loop={true}
+                videoClassName="player-video"
+                videoStyle={{ height: "100%" }}
+              />
+            </div>
+            <a
+              className="project__item-link"
+              target="_blank"
+              href="https://amay-sweets.com/"
+            >
+              Go to site
+            </a>
           </div>
         </div>
       </div>
@@ -96,4 +91,4 @@ const DancingPage = () => {
   );
 };
 
-export default DancingPage;
+export default CodingPage;

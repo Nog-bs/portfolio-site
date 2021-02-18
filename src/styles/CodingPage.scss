@@ -1,10 +1,22 @@
 @import "./imports";
 
-.dancing {
+.coding {
   display: flex;
   align-items: center;
   background-color: rgb(87, 41, 145);
   height: 100vh;
+
+  &__download {
+    text-decoration: none;
+    margin-top: 12px;
+    background-color: rgb(87, 41, 145);
+    color: white;
+    padding: 16px;
+
+    &:focus {
+      outline: black solid 2px;
+    }
+  }
 
   &__return {
     color: black;
@@ -64,6 +76,18 @@
 
   &-description {
     margin: 12px 0;
+  }
+
+  &-link {
+    text-decoration: none;
+    margin-top: 12px;
+    background-color: rgb(87, 41, 145);
+    color: white;
+    padding: 16px;
+
+    &:focus {
+      outline: black solid 2px;
+    }
   }
 }
 

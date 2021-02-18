@@ -6,6 +6,10 @@
   background-color: rgb(87, 41, 145);
   height: 100vh;
 
+  &__contact {
+    margin-top: 24px;
+  }
+
   &__head {
     display: flex;
     flex-direction: column;

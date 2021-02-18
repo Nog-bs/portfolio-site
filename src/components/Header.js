@@ -1,10 +1,14 @@
 // MODULES AND LIBRARIES
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 // STYLING
 import "../styles/HomePage.scss";
 
 const Header = () => {
+  const [contact, setContact] = useState(false);
+
+  const handleContact = () => setContact(!contact);
   return (
     <>
       <div className="home__head">
@@ -28,9 +32,16 @@ const Header = () => {
           <h5 className="home__head-dance">Dancer,</h5>
           <h5 className="home__head-develop">Developer</h5>
         </div>
-        <Link to="/contact" className="home__head-button">
+        <p onClick={handleContact} to="/contact" className="home__head-button">
           Contact
-        </Link>
+        </p>
+        {contact && (
+          <div className="home__contact">
+            <h5 className="home__contact-head">
+              Feel free to contact me through:
+            </h5>
+          </div>
+        )}
       </div>
     </>
   );
