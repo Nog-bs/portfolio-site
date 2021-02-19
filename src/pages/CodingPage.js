@@ -2,7 +2,6 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import HoverVideoPlayer from "react-hover-video-player";
-import { IoArrowBack } from "react-icons/io5";
 // COMPONENTS
 import { Header } from "../components";
 // STYLE
