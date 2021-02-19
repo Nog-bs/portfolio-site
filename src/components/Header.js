@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { SiLinkedin } from "react-icons/si";
 import { SiInstagram } from "react-icons/si";
 import { VscGithub } from "react-icons/vsc";
+import { AiOutlineMail } from "react-icons/ai";
 // ASSETS
 import resume from "../assets/download/edro-resume.pdf";
 
@@ -62,6 +63,14 @@ const Header = () => {
             >
               <SiInstagram className="home__contact-icon" />
             </a>
+            <a
+              target="_blank"
+              href="mailto:edrogonzales@gmail.com"
+              className="home__contact-link"
+            >
+              <AiOutlineMail className="home__contact-icon" />
+            </a>
+
             <a className="home__contact-download" href={resume} download>
               Download Resume
             </a>
