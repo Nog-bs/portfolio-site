@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import HoverVideoPlayer from "react-hover-video-player";
+import { IoArrowBack } from "react-icons/io5";
 // COMPONENTS
 import { Header } from "../components";
 // STYLE
@@ -17,7 +18,7 @@ const CodingPage = () => {
   return (
     <section className="coding">
       <Link to="/" className="coding__return">
-        Go Back
+        <p className="coding__return-icon-text">Go Back</p>
       </Link>
       <Header />
       <div id="style-3" className="coding__section">

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { SiLinkedin } from "react-icons/si";
 import { SiInstagram } from "react-icons/si";
 import { VscGithub } from "react-icons/vsc";
+import { useSpring, animated } from "react-spring";
 // ASSETS
 import resume from "../assets/download/edro-resume.pdf";
 
