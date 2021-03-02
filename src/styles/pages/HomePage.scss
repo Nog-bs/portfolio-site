@@ -15,8 +15,11 @@
     align-items: center;
     margin-top: 24px;
     position: absolute;
-    bottom: 0;
     animation: right 2s;
+    bottom: -8px;
+    left: 120px;
+    width: fit-content;
+    height: fit-content;
 
     @keyframes right {
       from {
@@ -29,6 +32,8 @@
 
     @include mobile {
       margin: 0;
+      left: 0;
+      left: initial;
       right: 0;
       top: 0;
       flex-direction: column;
@@ -54,9 +59,9 @@
       margin-right: 20px;
 
       @include mobile {
-        margin-top: 32px;
-        height: 50px;
-        height: 50px;
+        margin-top: 12px;
+        height: 36px;
+        height: 36px;
       }
     }
 
@@ -85,11 +90,12 @@
     margin-left: 40px;
     width: 50%;
     z-index: 2;
+    position: relative;
 
     @include mobile {
       margin: 0;
       padding: 16px;
-      height: 80vh;
+      height: 50vh;
       width: 100%;
     }
 
@@ -97,7 +103,7 @@
       font-weight: 700;
       font-size: 8rem;
       color: #ffff33;
-      width: 500px;
+      width: 80%;
 
       @include mobile {
         font-size: 3rem;

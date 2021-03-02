@@ -20,14 +20,7 @@ const Header = () => {
         <div className="home__head-title--first"></div>
         <h1 className="home__head-title">EDRO</h1>
         <h1 className="home__head-title">GONZALES </h1>
-
         {/* DESCRIPTION */}
-        <div className="home__head-description">
-          <h2 className="home__head-dance">Dancer,</h2>
-          <h2 className="home__head-develop">Developer</h2>
-        </div>
-        {/* DESCRIPTION */}
-        {/* CASCADING */}
         <div className="home__head-description">
           <h3 className="home__head-dance">Dancer,</h3>
           <h3 className="home__head-develop">Developer</h3>
