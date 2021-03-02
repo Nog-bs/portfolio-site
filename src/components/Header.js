@@ -8,7 +8,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import resume from "../assets/download/edro-resume.pdf";
 
 // STYLING
-import "../styles/HomePage.scss";
+import "../styles/pages/HomePage.scss";
 
 const Header = () => {
   const [contact, setContact] = useState(false);
@@ -17,7 +17,10 @@ const Header = () => {
   return (
     <>
       <div className="home__head">
-        <h1 className="home__head-title">Edro Gonzales</h1>
+        <div className="home__head-title--first"></div>
+        <h1 className="home__head-title">EDRO</h1>
+        <h1 className="home__head-title">GONZALES </h1>
+
         {/* DESCRIPTION */}
         <div className="home__head-description">
           <h2 className="home__head-dance">Dancer,</h2>

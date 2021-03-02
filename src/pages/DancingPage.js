@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // COMPONENTS
 import { Header } from "../components";
 // STYLE
-import "../styles/DancingPage.scss";
+import "../styles/pages/DancingPage.scss";
 
 const DancingPage = () => {
   return (
@@ -46,7 +46,7 @@ const DancingPage = () => {
           </ul>
         </div>
         <div className="dancing__section-projects">
-          <h3 className="projects__head">Projects</h3>
+          <h3 className="projects__head">Personal Projects</h3>
           <div className="project__item">
             <h4 className="project__item-head">[2019] 1985 Choreography</h4>
             <p className="project__item-description">

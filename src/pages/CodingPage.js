@@ -5,7 +5,7 @@ import HoverVideoPlayer from "react-hover-video-player";
 // COMPONENTS
 import { Header } from "../components";
 // STYLE
-import "../styles/CodingPage.scss";
+import "../styles/pages/CodingPage.scss";
 // ASSETS
 import resume from "../assets/download/edro-resume.pdf";
 import websitePreview from "../assets/videos/happy-bonsai-trim.mp4";

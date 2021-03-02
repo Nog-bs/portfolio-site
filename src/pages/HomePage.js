@@ -5,7 +5,7 @@ import HoverVideoPlayer from "react-hover-video-player";
 // COMPONENTS
 import { Header } from "../components";
 // STYLE
-import "../styles/HomePage.scss";
+import "../styles/pages/HomePage.scss";
 // ASSET
 import videoPreview from "../assets/videos/homepage-preview.mp4";
 import websitePreview from "../assets/videos/happy-bonsai-trim.mp4";

@@ -1,4 +1,4 @@
-@import "../styles/imports";
+@import "../imports";
 
 .home {
   display: flex;
@@ -16,12 +16,31 @@
     margin-top: 24px;
     position: absolute;
     bottom: 0;
+    animation: right 2s;
+
+    @keyframes right {
+      from {
+        transform: translateX(-500px);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
 
     @include mobile {
       margin: 0;
-      position: relative;
-      top: 10px;
-      justify-content: center;
+      right: 0;
+      top: 0;
+      flex-direction: column;
+      animation: top 2s;
+      @keyframes top {
+        from {
+          transform: translateY(-500px);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
     }
 
     &-link {
@@ -32,11 +51,12 @@
     &-icon {
       height: 50px;
       width: 50px;
-      margin-right: 12px;
+      margin-right: 20px;
 
       @include mobile {
-        height: 30px;
-        height: 30px;
+        margin-top: 32px;
+        height: 50px;
+        height: 50px;
       }
     }
 
@@ -64,20 +84,69 @@
     flex-direction: column;
     margin-left: 40px;
     width: 50%;
+    z-index: 2;
 
     @include mobile {
       margin: 0;
       padding: 16px;
-      height: 50vh;
+      height: 80vh;
       width: 100%;
     }
 
     &-title {
-      font-size: 3rem;
+      font-weight: 700;
+      font-size: 8rem;
       color: #ffff33;
+      width: 500px;
 
       @include mobile {
-        font-size: 2.25rem;
+        font-size: 3rem;
+      }
+
+      &--first {
+        background-color: black;
+        z-index: -1;
+        position: absolute;
+        height: 160px;
+        width: 20%;
+        transform: translateX(100px);
+        animation: lengthen 5s ease-in-out 0s 1;
+
+        @include mobile {
+          width: 25%;
+          transform: translateX(50px);
+          height: 65px;
+          animation: mobile 5s ease-in-out 0s 1;
+          @keyframes mobile {
+            0% {
+              width: 10%;
+              transform: translateX(0);
+            }
+            50% {
+              width: 15%;
+              transform: translateX(100px);
+            }
+            100% {
+              width: 25%;
+              transform: translateX(50px);
+            }
+          }
+        }
+
+        @keyframes lengthen {
+          0% {
+            width: 10%;
+            transform: translateX(0);
+          }
+          50% {
+            width: 15%;
+            transform: translateX(200px);
+          }
+          100% {
+            width: 20%;
+            transform: translateX(100px);
+          }
+        }
       }
     }
 
