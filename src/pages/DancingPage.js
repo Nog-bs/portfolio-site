@@ -53,8 +53,8 @@ const DancingPage = () => {
               My first self choreographed video production
             </p>
             <iframe
-              width="560"
-              height="315"
+              height="350px"
+              width="100%"
               src="https://www.youtube.com/embed/s9WUAFoSSeI"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -68,8 +68,8 @@ const DancingPage = () => {
               showcase
             </p>
             <iframe
-              width="560"
-              height="315"
+              height="350px"
+              width="100%"
               src="https://www.youtube.com/embed/-g3C7o6yzF0"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -82,8 +82,8 @@ const DancingPage = () => {
               International Competition in San Francisco, California
             </p>
             <iframe
-              width="560"
-              height="315"
+              height="350px"
+              width="100%"
               src="https://www.youtube.com/embed/1y2O4QVNwfw"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

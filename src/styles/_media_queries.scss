@@ -1,0 +1,21 @@
+$mobile-startpoint: 320px;
+$tablet-startpoint: 768px;
+$desktop-startpoint: 1200px;
+
+@mixin mobile {
+  @media screen and (min-width: $mobile-startpoint) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-startpoint) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-startpoint) {
+    @content;
+  }
+}

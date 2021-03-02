@@ -6,11 +6,21 @@
   background-color: rgb(87, 41, 145);
   height: 100vh;
 
+  @include mobile {
+    height: 100%;
+    flex-direction: column;
+  }
+
   &__return {
     color: black;
     position: absolute;
     left: 12px;
     top: 12px;
+
+    @include mobile {
+      left: 6px;
+      top: 6px;
+    }
   }
 
   &__section {
@@ -24,8 +34,18 @@
     overflow-y: scroll;
     order: -1;
 
+    @include mobile {
+      width: 100%;
+      height: 100%;
+      overflow-y: visible;
+    }
+
     &-head {
       font-size: 1.75rem;
+
+      @include mobile {
+        margin-top: 16px;
+      }
     }
 
     &-experience {
