@@ -6,6 +6,7 @@ import { VscGithub } from "react-icons/vsc";
 import { AiOutlineMail } from "react-icons/ai";
 // ASSETS
 import resume from "../assets/download/edro-resume.pdf";
+import profile from "../assets/images/profile.jpg";
 
 // STYLING
 import "../styles/pages/HomePage.scss";
@@ -21,21 +22,32 @@ const Header = () => {
         <h1 className="home__head-title">EDRO</h1>
         <h1 className="home__head-title">GONZALES </h1>
         {/* DESCRIPTION */}
-        <div className="home__head-description">
-          <h3 className="home__head-dance">Dancer,</h3>
-          <h3 className="home__head-develop">Developer</h3>
+        <div className="home__head-container">
+          <div className="home__head-description">
+            <h3 className="home__head-dance">Dancer,</h3>
+            <h3 className="home__head-develop">Developer</h3>
+          </div>
+          <div className="home__head-description">
+            <h4 className="home__head-dance">Dancer,</h4>
+            <h4 className="home__head-develop">Developer</h4>
+          </div>
+          <div className="home__head-description">
+            <h5 className="home__head-dance">Dancer,</h5>
+            <h5 className="home__head-develop">Developer</h5>
+          </div>
+          <img
+            src={profile}
+            alt="headshot"
+            className="home__head-container-img"
+          ></img>
         </div>
-        <div className="home__head-description">
-          <h4 className="home__head-dance">Dancer,</h4>
-          <h4 className="home__head-develop">Developer</h4>
-        </div>
-        <div className="home__head-description">
-          <h5 className="home__head-dance">Dancer,</h5>
-          <h5 className="home__head-develop">Developer</h5>
-        </div>
-        <p onClick={handleContact} to="/contact" className="home__head-button">
+        <button
+          onClick={handleContact}
+          to="/contact"
+          className="home__head-button"
+        >
           {contact ? "Hide" : "Contact"}
-        </p>
+        </button>
         {contact && (
           <div className="home__contact">
             <a

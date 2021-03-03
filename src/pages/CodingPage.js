@@ -14,6 +14,14 @@ import amayPreview from "../assets/videos/amay-sweets-trim.mp4";
 const CodingPage = () => {
   const websiteRef = useRef();
   const amayRef = useRef();
+
+  const dateStart = () => {
+    const oneDay = 24 * 60 * 60 * 1000;
+    const startDate = new Date(2020, 7, 19);
+    const presentDate = Date.now();
+
+    return Math.floor((presentDate - startDate) / oneDay);
+  };
   return (
     <section className="coding">
       <Link to="/" className="coding__return">
@@ -25,18 +33,15 @@ const CodingPage = () => {
         <a className="coding__download" href={resume} download>
           Download Resume
         </a>
-        <div className="coding__section-experience">
-          <h3 className="experience__head">Education</h3>
+        {/* <div className="coding__section-experience">
+          <h3 className="experience__head">My Story</h3>
           <ul className="experience__list">
             <li className="experience__list-item">
-              [Nov 2020 - Feb 2021] BrainStation | Web Development Diploma
-            </li>
-            <li className="experience__list-item">
-              [Sept 2018 – Aug 2020] Simon Fraser University | Bachelor of
-              Commerce
+              My journey into software development began{" "}
+              <b>{dateStart()} days ago</b>. WILL ADD MORE HERE LATER...
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="coding__section-projects">
           <h3 className="projects__head">Projects</h3>
           <div className="project__item">
