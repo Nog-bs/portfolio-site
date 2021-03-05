@@ -12,7 +12,6 @@ const DancingPage = () => {
       <Link to="/" className="dancing__return">
         Go Back
       </Link>
-      <Header />
       <div id="style-3" className="dancing__section">
         <h2 className="dancing__section-head">Choreographer & Battler</h2>
         <div className="dancing__section-experience">

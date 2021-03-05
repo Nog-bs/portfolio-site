@@ -27,23 +27,29 @@ const CodingPage = () => {
       <Link to="/" className="coding__return">
         <p className="coding__return-icon-text">Go Back</p>
       </Link>
-      <Header />
       <div id="style-3" className="coding__section">
         <h2 className="coding__section-head">Full Stack Developer</h2>
         <a className="coding__download" href={resume} download>
           Download Resume
         </a>
-        {/* <div className="coding__section-experience">
-          <h3 className="experience__head">My Story</h3>
+        <div className="coding__section-experience">
+          <h3 className="experience__head">About</h3>
           <ul className="experience__list">
             <li className="experience__list-item">
-              My journey into software development began{" "}
-              <b>{dateStart()} days ago</b>. WILL ADD MORE HERE LATER...
+              Greetings! My name is Edro Gonzales and I started my coding
+              journey {dateStart()} days ago. I am a Full Stack Developer from
+              Vancouver, BC that has a background in sales and business, whilst
+              also having maintained a long dance career. I have creative
+              passions which lead me to developing a Full Stack skillset as I
+              love experimenting with technologies. My goal as a developer is to
+              learn as much as I can in the next few years whist also developing
+              impactful experiences for people, just as I have done in my
+              previous domains.
             </li>
           </ul>
-        </div> */}
+        </div>
         <div className="coding__section-projects">
-          <h3 className="projects__head">Projects</h3>
+          <h3 className="projects__head">Deployed Projects</h3>
           <div className="project__item">
             <h4 className="project__item-head">[Jan 2021] Happy Bonsai</h4>
             <p className="project__item-description">

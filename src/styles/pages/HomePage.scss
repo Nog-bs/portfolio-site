@@ -122,6 +122,15 @@
         height: 200px;
         width: 180px;
         border-radius: 100%;
+        animation: appear 1s ease-in-out;
+        @keyframes appear {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
 
         @include mobile {
           height: 160px;
@@ -132,9 +141,8 @@
 
     &-title {
       font-weight: 700;
-      font-size: 8rem;
+      font-size: 17vh;
       color: #ffff33;
-      width: 80%;
 
       @include mobile {
         font-size: 3rem;
@@ -251,7 +259,7 @@
     }
 
     &-dancing {
-      height: 50%;
+      height: 50vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -260,6 +268,10 @@
       position: relative;
       text-decoration: none;
       color: black;
+
+      &-container {
+        height: 50%;
+      }
 
       &:hover &-video {
         display: flex;
@@ -275,7 +287,7 @@
     }
 
     &-coding {
-      height: 50%;
+      height: 50vh;
       display: flex;
       flex-direction: column;
       justify-content: center;

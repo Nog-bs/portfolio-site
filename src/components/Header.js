@@ -7,25 +7,44 @@ import { AiOutlineMail } from "react-icons/ai";
 // ASSETS
 import resume from "../assets/download/edro-resume.pdf";
 import profile from "../assets/images/profile.jpg";
+import firstProfile from "../assets/images/first-profile.png";
+import firstDance from "../assets/images/first-dance.jpg";
 
 // STYLING
 import "../styles/pages/HomePage.scss";
 
 const Header = () => {
   const [contact, setContact] = useState(false);
+  const [picture, setPicture] = useState(profile);
 
+  // EVENT HANDLERS
   const handleContact = () => setContact(!contact);
+  const danceFirst = () => setPicture(firstDance);
+  const profileFirst = () => setPicture(firstProfile);
+  const resetPicture = () => setPicture(profile);
   return (
     <>
       <div className="home__head">
         <div className="home__head-title--first"></div>
         <h1 className="home__head-title">EDRO</h1>
-        <h1 className="home__head-title">GONZALES </h1>
+        <h1 className="home__head-title">GONZALES</h1>
         {/* DESCRIPTION */}
         <div className="home__head-container">
           <div className="home__head-description">
-            <h3 className="home__head-dance">Dancer,</h3>
-            <h3 className="home__head-develop">Developer</h3>
+            <h3
+              onMouseEnter={danceFirst}
+              onMouseLeave={resetPicture}
+              className="home__head-dance"
+            >
+              Dancer,
+            </h3>
+            <h3
+              onMouseEnter={profileFirst}
+              onMouseLeave={resetPicture}
+              className="home__head-develop"
+            >
+              Developer
+            </h3>
           </div>
           <div className="home__head-description">
             <h4 className="home__head-dance">Dancer,</h4>
@@ -36,10 +55,10 @@ const Header = () => {
             <h5 className="home__head-develop">Developer</h5>
           </div>
           <img
-            src={profile}
-            alt="headshot"
+            src={picture}
+            alt="profile picture"
             className="home__head-container-img"
-          ></img>
+          />
         </div>
         <button
           onClick={handleContact}
