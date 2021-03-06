@@ -1,0 +1,34 @@
+@import "./typography";
+@import "./media_queries";
+
+@mixin slidebutton($firstcolor, $secondcolor) {
+  outline: none;
+  border: none;
+  margin-top: 24px;
+  width: 150px;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: $font-regular;
+  transition: 0.5s ease-out;
+  color: #fffafa;
+  background: linear-gradient(
+      to left,
+      rgba($color: $firstcolor, $alpha: 1) 50%,
+      rgba($color: $secondcolor, $alpha: 1) 50%
+    )
+    right;
+  background-size: 200%;
+
+  @include mobile {
+    padding: 8px 16px;
+  }
+
+  &:hover {
+    background-position: left;
+    color: black;
+  }
+}

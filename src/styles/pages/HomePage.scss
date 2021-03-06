@@ -70,25 +70,14 @@
     }
 
     &-download {
-      text-decoration: none;
+      @include slidebutton(#38195e, #a9a9db);
       margin-top: 12px;
-      background-color: rgba(255, 255, 51, 0.5);
-      color: white;
       padding: 16px;
       position: relative;
       bottom: 8px;
-      transition: 0.5s;
-
-      &:hover {
-        color: blue;
-      }
 
       @include mobile {
         display: none;
-      }
-
-      &:focus {
-        outline: black solid 2px;
       }
     }
   }
@@ -96,7 +85,7 @@
   &__head {
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
+    padding: 12px 12px 0 40px;
     width: 50%;
     height: 80%;
     z-index: 2;
@@ -111,6 +100,17 @@
 
     &-container {
       position: relative;
+      animation: appear 1s ease-in-out;
+      z-index: -1;
+      @keyframes appear {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
       &-img {
         position: absolute;
         right: 0;
@@ -121,35 +121,26 @@
         background-position: center;
         height: 200px;
         width: 180px;
-        border-radius: 100%;
-        animation: appear 1s ease-in-out;
-        @keyframes appear {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
+        border-radius: 6px;
 
         @include mobile {
-          height: 160px;
-          width: 140px;
+          display: none;
         }
       }
     }
 
     &-title {
-      font-weight: 700;
-      font-size: 17vh;
-      color: #ffff33;
+      font-size: 7rem;
+      color: #fffafa;
+      display: flex;
+      flex-wrap: wrap;
 
       @include mobile {
         font-size: 3rem;
       }
 
       &--first {
-        background-color: black;
+        background-color: #38195e;
         z-index: -1;
         position: absolute;
         height: 160px;
@@ -200,41 +191,13 @@
     }
 
     &-button {
-      outline: none;
-      border: none;
-      margin-top: 24px;
-      width: 150px;
-      padding: 16px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-weight: 400;
-      font-family: $font-regular;
-      transition: 0.5s ease-out;
-      z-index: 1;
-      background: linear-gradient(
-          to left,
-          rgba(255, 255, 51, 0.9) 50%,
-          black 50%
-        )
-        right;
-      background-size: 200%;
-
-      @include mobile {
-        padding: 8px 16px;
-      }
-
-      &:hover {
-        background-position: left;
-        color: white;
-      }
+      @include slidebutton(#38195e, #a9a9db);
     }
 
     &-dance {
       &:hover {
         cursor: pointer;
-        color: rgba(255, 255, 51, 0.9);
+        color: rgba($color: #a9a9db, $alpha: 1);
       }
     }
 
@@ -242,7 +205,7 @@
       margin-left: 12px;
       &:hover {
         cursor: pointer;
-        color: rgba(255, 255, 51, 0.9);
+        color: rgba($color: #8069b6, $alpha: 1);
       }
     }
   }
@@ -264,10 +227,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: rgba(255, 255, 51, 0.5);
+      background-color: rgba($color: #a9a9db, $alpha: 1);
       position: relative;
       text-decoration: none;
       color: black;
+
+      @include mobile {
+        height: 25vh;
+      }
 
       &-container {
         height: 50%;
@@ -292,10 +259,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: rgba(255, 255, 51, 0.25);
+      background-color: rgba($color: #8069b6, $alpha: 1);
       position: relative;
       text-decoration: none;
       color: rgb(87, 41, 145);
+
+      @include mobile {
+        height: 25vh;
+      }
 
       &:hover &-video {
         display: flex;

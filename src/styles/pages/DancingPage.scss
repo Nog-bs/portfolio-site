@@ -25,7 +25,7 @@
     flex-direction: column;
     align-items: center;
     padding: 16px;
-    background-color: rgba(255, 255, 51, 0.5);
+    background-color: #a9a9db;
     overflow-y: scroll;
 
     &-head {
@@ -52,11 +52,17 @@
 }
 
 .experience__list {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   &-item {
     list-style: none;
     font-family: $font-regular;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 50vw;
+    width: 50vw;
   }
 }
 
@@ -73,6 +79,11 @@
 
   &-description {
     margin: 12px 0;
+  }
+
+  &-video {
+    height: 1000px;
+    width: 70%;
   }
 }
 

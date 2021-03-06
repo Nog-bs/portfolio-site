@@ -29,9 +29,6 @@ const CodingPage = () => {
       </Link>
       <div id="style-3" className="coding__section">
         <h2 className="coding__section-head">Full Stack Developer</h2>
-        <a className="coding__download" href={resume} download>
-          Download Resume
-        </a>
         <div className="coding__section-experience">
           <h3 className="experience__head">About</h3>
           <ul className="experience__list">
@@ -97,6 +94,9 @@ const CodingPage = () => {
             </a>
           </div>
         </div>
+        <a className="coding__download" href={resume} download>
+          Download Resume
+        </a>
       </div>
     </section>
   );

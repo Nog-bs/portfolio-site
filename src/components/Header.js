@@ -9,6 +9,10 @@ import resume from "../assets/download/edro-resume.pdf";
 import profile from "../assets/images/profile.jpg";
 import firstProfile from "../assets/images/first-profile.png";
 import firstDance from "../assets/images/first-dance.jpg";
+import secondProfile from "../assets/images/second-profile.jpg";
+import secondDance from "../assets/images/second-dance.jpg";
+import thirdProfile from "../assets/images/third-profile.jpg";
+import thirdDance from "../assets/images/third-dance.jpg";
 
 // STYLING
 import "../styles/pages/HomePage.scss";
@@ -21,13 +25,17 @@ const Header = () => {
   const handleContact = () => setContact(!contact);
   const danceFirst = () => setPicture(firstDance);
   const profileFirst = () => setPicture(firstProfile);
+  const danceSecond = () => setPicture(secondDance);
+  const profileSecond = () => setPicture(secondProfile);
+  const danceThird = () => setPicture(thirdDance);
+  const profileThird = () => setPicture(thirdProfile);
   const resetPicture = () => setPicture(profile);
   return (
     <>
       <div className="home__head">
         <div className="home__head-title--first"></div>
         <h1 className="home__head-title">EDRO</h1>
-        <h1 className="home__head-title">GONZALES</h1>
+        <h2 className="home__head-title">GONZALES</h2>
         {/* DESCRIPTION */}
         <div className="home__head-container">
           <div className="home__head-description">
@@ -47,12 +55,36 @@ const Header = () => {
             </h3>
           </div>
           <div className="home__head-description">
-            <h4 className="home__head-dance">Dancer,</h4>
-            <h4 className="home__head-develop">Developer</h4>
+            <h4
+              onMouseEnter={danceSecond}
+              onMouseLeave={resetPicture}
+              className="home__head-dance"
+            >
+              Dancer,
+            </h4>
+            <h4
+              onMouseEnter={profileSecond}
+              onMouseLeave={resetPicture}
+              className="home__head-develop"
+            >
+              Developer
+            </h4>
           </div>
           <div className="home__head-description">
-            <h5 className="home__head-dance">Dancer,</h5>
-            <h5 className="home__head-develop">Developer</h5>
+            <h5
+              onMouseEnter={danceThird}
+              onMouseLeave={resetPicture}
+              className="home__head-dance"
+            >
+              Dancer,
+            </h5>
+            <h5
+              onMouseEnter={profileThird}
+              onMouseLeave={resetPicture}
+              className="home__head-develop"
+            >
+              Developer
+            </h5>
           </div>
           <img
             src={picture}

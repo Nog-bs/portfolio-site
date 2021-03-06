@@ -35,10 +35,10 @@ const DancingPage = () => {
             Street-Dance/Battle Experience [2018 - Present]
           </h3>
           <ul className="experience__list">
-            <p className="experience__list-styles">
+            <li className="experience__list-item">
               Dance styles: Popping [2 years], Hip hop [2 years], Waacking [1
               year], House [1 year]
-            </p>
+            </li>
             <li className="experience__list-item">
               [2018 - 2020] Founder of Level Up All-Styles Company
             </li>
@@ -53,7 +53,7 @@ const DancingPage = () => {
             </p>
             <iframe
               height="350px"
-              width="100%"
+              width="75%"
               src="https://www.youtube.com/embed/s9WUAFoSSeI"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -68,7 +68,7 @@ const DancingPage = () => {
             </p>
             <iframe
               height="350px"
-              width="100%"
+              width="75%"
               src="https://www.youtube.com/embed/-g3C7o6yzF0"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -82,7 +82,7 @@ const DancingPage = () => {
             </p>
             <iframe
               height="350px"
-              width="100%"
+              width="75%"
               src="https://www.youtube.com/embed/1y2O4QVNwfw"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
