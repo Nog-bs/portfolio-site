@@ -9,11 +9,34 @@
   &__return {
     color: black;
     position: absolute;
+    text-decoration: none;
     left: 12px;
     top: 12px;
 
     @include mobile {
       left: 6px;
+      top: 6px;
+    }
+
+    &-icon {
+      height: 50px;
+      width: 50px;
+
+      &:hover {
+        opacity: 0.5;
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  &__code {
+    color: black;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+
+    @include mobile {
+      right: 6px;
       top: 6px;
     }
   }
@@ -51,18 +74,24 @@
   }
 }
 
-.experience__list {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  &-item {
-    list-style: none;
-    font-family: $font-regular;
-    font-weight: 500;
-    font-size: 50vw;
-    width: 50vw;
+.experience {
+  &__head {
+    text-align: center;
+  }
+
+  &__list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-item {
+      list-style: none;
+      font-family: $font-regular;
+      font-weight: 500;
+      font-size: 1rem;
+      width: 50vw;
+    }
   }
 }
 

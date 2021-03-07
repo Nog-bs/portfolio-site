@@ -11,26 +11,37 @@
     height: 100%;
   }
 
-  &__download {
-    text-decoration: none;
-    margin-top: 12px;
-    background-color: rgb(87, 41, 145);
-    color: white;
-    padding: 16px;
-
-    &:focus {
-      outline: black solid 2px;
-    }
-  }
-
   &__return {
     color: black;
     position: absolute;
+    text-decoration: none;
     left: 12px;
     top: 12px;
 
     @include mobile {
       left: 6px;
+      top: 6px;
+    }
+
+    &-icon {
+      height: 50px;
+      width: 50px;
+
+      &:hover {
+        opacity: 0.5;
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  &__dance {
+    color: black;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+
+    @include mobile {
+      right: 6px;
       top: 6px;
     }
 
@@ -50,85 +61,128 @@
     background-color: #8069b6;
     overflow-y: scroll;
     scroll-behavior: smooth;
+  }
 
-    &-head {
-      font-size: 1.75rem;
+  &__head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-download {
+      @include slidebutton(#38195e, #a9a9db);
+    }
+
+    &-title {
+      text-align: center;
+      font-size: 2rem;
 
       @include mobile {
         margin-top: 12px;
       }
     }
+  }
 
-    &-experience {
-      margin-top: 24px;
-      width: 100%;
+  &__about {
+    margin: 24px 0 62px 0;
+    width: 80vw;
+
+    &-head {
+      margin-bottom: 12px;
+      font-size: 2rem;
     }
 
-    &-projects {
+    &-list {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      margin-top: 24px;
-    }
-  }
-}
+      justify-content: center;
 
-.experience {
-  &__head {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 12px;
-  }
+      &-item {
+        list-style: none;
+        font-family: $font-regular;
+        font-weight: 400;
+        font-size: 1.5rem;
 
-  &__list {
-    display: flex;
-    justify-content: center;
-    text-align: justify;
-
-    &-item {
-      width: 70vw;
-      list-style: none;
-      font-family: $font-regular;
-      font-weight: 400;
-      font-size: 1.25rem;
-
-      @include mobile {
-        font-size: 1rem;
+        @include mobile {
+          font-size: 1.25rem;
+        }
       }
     }
   }
+
+  &__project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 42px;
+  }
 }
 
-.project__item {
-  margin-top: 24px;
-  width: 100%;
+.project.active {
+  opacity: 1;
+  transition-duration: 1.5s;
+  transform: scale(1.08);
+}
+
+.project {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  opacity: 0;
+  width: 75%;
+  transition-duration: 1s ease;
 
-  &-video {
-    height: 100%;
-    margin-bottom: 12px;
+  &__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  &-head {
-    text-decoration: underline;
+  &__head {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
   }
 
-  &-description {
-    margin: 12px 0;
+  &__description {
+    width: 75%;
+    margin-bottom: 24px;
+    font-size: 1.25rem;
   }
 
-  &-link {
-    text-decoration: none;
-    margin-top: 12px;
-    background-color: rgb(87, 41, 145);
-    color: white;
-    padding: 16px;
+  &__link {
+    @include slidebutton(#38195e, #a9a9db);
+    top: 0;
+  }
 
-    &:focus {
-      outline: black solid 2px;
+  &__left {
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    &:hover {
+      opacity: 0.5;
+      transform: scale(1.08);
+    }
+  }
+
+  &__right {
+    position: absolute;
+    bottom: -5%;
+    right: 0;
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    &:hover {
+      opacity: 0.5;
+      transform: scale(1.08);
     }
   }
 }
@@ -146,4 +200,16 @@
 
 #style-3::-webkit-scrollbar-thumb {
   background-color: black;
+}
+
+// SLIDE ANIMATIONS
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
 }

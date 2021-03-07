@@ -1,8 +1,10 @@
 // MODULES AND LIBRARIES
 import React from "react";
 import { Link } from "react-router-dom";
+import { FcHome } from "react-icons/fc";
+import { FaArrowRight } from "react-icons/fa";
 // COMPONENTS
-import { Header } from "../components";
+
 // STYLE
 import "../styles/pages/DancingPage.scss";
 
@@ -10,7 +12,10 @@ const DancingPage = () => {
   return (
     <section className="dancing">
       <Link to="/" className="dancing__return">
-        Go Back
+        <FcHome className="dancing__return-icon" />
+      </Link>
+      <Link to="/coding" className="dancing__code">
+        <FaArrowRight className="dancing__return-icon" />
       </Link>
       <div id="style-3" className="dancing__section">
         <h2 className="dancing__section-head">Choreographer & Battler</h2>
