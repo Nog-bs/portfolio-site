@@ -3,8 +3,8 @@
 .coding {
   display: flex;
   align-items: center;
-  background-color: rgb(87, 41, 145);
   height: 100vh;
+  background-color: rgb(87, 41, 145);
 
   @include mobile {
     flex-direction: column;
@@ -17,6 +17,7 @@
     text-decoration: none;
     left: 12px;
     top: 12px;
+    z-index: 999;
 
     @include mobile {
       left: 6px;
@@ -39,6 +40,7 @@
     position: absolute;
     right: 12px;
     top: 12px;
+    z-index: 999;
 
     @include mobile {
       right: 6px;
@@ -57,17 +59,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
     background-color: #8069b6;
     overflow-y: scroll;
-    scroll-behavior: smooth;
   }
 
   &__head {
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 
     &-download {
       @include slidebutton(#38195e, #a9a9db);
@@ -86,6 +88,7 @@
   &__about {
     margin: 24px 0 62px 0;
     width: 80vw;
+    z-index: 2;
 
     &-head {
       margin-bottom: 12px;
@@ -109,6 +112,65 @@
     }
   }
 
+  &__parallax {
+    height: 250px;
+    width: 250px;
+    background-color: #a9a9db;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    z-index: 1;
+  }
+
+  &__skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin-bottom: 34px;
+
+    &-head {
+      align-self: flex-start;
+      font-size: 2rem;
+      margin-bottom: 34px;
+    }
+
+    &-kit {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+
+      &-item {
+        margin-right: 16px;
+        height: 225px;
+        width: 225px;
+      }
+    }
+
+    &-note {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($color: #38195e, $alpha: 0.75);
+      padding: 16px;
+      color: #fffafa;
+      width: fit-content;
+
+      &-text {
+        font-size: 1.25rem;
+      }
+
+      &-btn {
+        @include slidebutton(#38195e, #8069b6);
+        margin-top: 16px;
+        position: relative;
+      }
+    }
+  }
+
   &__project {
     display: flex;
     flex-direction: column;
@@ -116,6 +178,49 @@
     justify-content: center;
     position: relative;
     margin-bottom: 42px;
+    height: 100vh;
+    width: 80vw;
+
+    &-head {
+      font-size: 2rem;
+      align-self: flex-start;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    background-color: #38195e;
+    width: 100%;
+    padding: 16px;
+
+    &-icon {
+      height: 35px;
+      width: 35px;
+      margin: 6px;
+
+      &:hover {
+        color: blue;
+        transform: scale(1.1);
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      color: #fffafa;
+    }
+
+    &-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-download {
+      @include slidebutton(#a9a9db, #8069b6);
+      position: relative;
+      bottom: 14px;
+    }
   }
 }
 
@@ -138,6 +243,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+    &-link {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        color: blue;
+      }
+    }
+
+    &-github {
+      position: absolute;
+      bottom: 1%;
+      right: 13%;
+      height: 50px;
+      width: 50px;
+    }
   }
 
   &__head {
@@ -147,8 +270,13 @@
 
   &__description {
     width: 75%;
+    font-weight: 700;
     margin-bottom: 24px;
-    font-size: 1.25rem;
+    font-size: 1rem;
+
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &__link {
