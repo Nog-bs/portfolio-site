@@ -101,7 +101,14 @@ const CodingPage = () => {
         </div>
         <div className="coding__project">
           <h3 className="coding__project-head">Portfolio</h3>
-          <FaArrowAltCircleLeft className="project__left" onClick={prevSlide} />
+          {current === 0 ? (
+            ""
+          ) : (
+            <FaArrowAltCircleLeft
+              className="project__left"
+              onClick={prevSlide}
+            />
+          )}
           <FaArrowAltCircleRight
             className="project__right"
             onClick={nextSlide}
