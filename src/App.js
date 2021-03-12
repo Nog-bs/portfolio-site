@@ -1,10 +1,14 @@
 import React from "react";
-import { Home } from "./components";
+import GlobalStyles from "./GlobalStyles";
+import { Hero, Navbar, Showcase } from "./components";
 
 const App = () => {
   return (
     <>
-      <Home />
+      <GlobalStyles />
+      <Navbar />
+      <Hero />
+      <Showcase />
     </>
   );
 };
