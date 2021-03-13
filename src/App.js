@@ -1,21 +1,31 @@
-// MODULE
-import React from "react";
-// ROUTER
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// STYLE
-import "./styles/pages/globalStyle.scss";
-// PAGES
-import { HomePage, DancingPage, CodingPage } from "./pages/";
+import React, { useState, useEffect } from "react";
+import GlobalStyles from "./GlobalStyles";
+import { Hero, Navbar, About, Showcase } from "./components";
 
 const App = () => {
+  const [load, setLoad] = useState(false);
+  const [height] = useState(50);
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  setTimeout(() => {
+    setLoad(true);
+  }, 10000);
+
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/dancing" component={DancingPage} />
-        <Route path="/coding" component={CodingPage} />
-      </Switch>
-    </Router>
+    <>
+      <GlobalStyles />
+      <Navbar />
+      <Hero load={load} />
+      <About load={load} height={height + offsetY / 50} />
+      {/* <Showcase load={load} height={height + offsetY / 50} /> */}
+    </>
   );
 };
 
