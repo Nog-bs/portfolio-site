@@ -4,8 +4,6 @@ import { SiInstagram, SiGithub, SiLinkedin, SiMailDotRu } from "react-icons/si";
 
 export const Nav = styled.nav`
   position: absolute;
-  /* position: sticky;
-  top: 0; */
   z-index: 2;
   color: white;
   padding: 16px;

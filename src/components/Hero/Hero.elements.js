@@ -21,7 +21,7 @@ export const HeroImage = styled.div`
   position: absolute;
   z-index: -1;
 
-  animation: appear 10s ease-in;
+  animation: appear 12s ease-in;
 
   @keyframes appear {
     0% {
@@ -50,12 +50,6 @@ export const HeroText = styled.p`
   color: white;
   font-size: 2rem;
 `;
-export const HeroHead = styled.h1`
-  font-weight: 700;
-  text-align: center;
-  color: white;
-  font-size: 4rem;
-`;
 
 // BOTTOM INFOSECTION
 export const InfoContainer = styled.div`
@@ -66,7 +60,7 @@ export const InfoContainer = styled.div`
   padding: 16px;
   width: 100%;
   color: white;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 `;
 export const InfoLocation = styled.p``;
 export const InfoCopyright = styled.p`

@@ -5,37 +5,37 @@ import {
   HeroSection,
   HeroImage,
   TextContainer,
-  HeroHead,
   HeroText,
   InfoContainer,
   InfoLocation,
   InfoCopyright,
 } from "./Hero.elements";
 
-const Hero = () => {
+const Hero = ({ load }) => {
   return (
     <>
       <HeroImage />
       <HeroSection>
         <TextContainer>
-          {/* <HeroHead>Edro</HeroHead> */}
           <HeroText>
-            <Typical
-              loop={1}
-              wrapper="b"
-              steps={[
-                "Welcome",
-                1000,
-                "My name is Edro.",
-                1000,
-                "I'm a Dancer 🕺.",
-                1000,
-                "I'm a Developer 💻.",
-                1000,
-                "Edro Gonzales",
-                1000,
-              ]}
-            />
+            {load ? (
+              <Typical loop={1} wrapper="b" steps={["Edro Gonzales.", 1000]} />
+            ) : (
+              <Typical
+                loop={1}
+                wrapper="b"
+                steps={[
+                  "Welcome",
+                  1000,
+                  "My name is Edro.",
+                  1000,
+                  "I'm a Dancer 🕺.",
+                  1000,
+                  "I'm a Developer 💻.",
+                  1000,
+                ]}
+              />
+            )}
           </HeroText>
         </TextContainer>
         <InfoContainer>
