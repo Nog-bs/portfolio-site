@@ -17,6 +17,7 @@ import git from "../../assets/images/git.png";
 const About = ({ load, height }) => {
   return (
     <AboutSection load={load}>
+      <div id="about" />
       <AboutHead height={height}>About</AboutHead>
       <AboutContainer>
         <AboutText>

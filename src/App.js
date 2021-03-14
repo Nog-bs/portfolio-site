@@ -15,7 +15,7 @@ const App = () => {
       <Navbar />
       <Hero load={load} />
       <About load={load} />
-      {/* <Showcase load={load} /> */}
+      <Showcase id="showcase" load={load} />
     </>
   );
 };

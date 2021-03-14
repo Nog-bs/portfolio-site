@@ -2,14 +2,19 @@ import styled from "styled-components";
 
 export const AboutSection = styled.section`
   display: ${({ load }) => (load ? "flex" : "none")};
-  height: 100vh;
   width: 100%;
   background-color: #001003;
   color: white;
   padding: 42px 0;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
 `;
 
 export const AboutHead = styled.h2`
+  margin-top: 42px;
+  align-self: flex-start;
   padding-top: 12px;
   font-size: 4rem;
   writing-mode: vertical-lr;
@@ -18,7 +23,6 @@ export const AboutHead = styled.h2`
   background-color: white;
   color: black;
   order: 1;
-  transition: ease-in all;
 `;
 
 // ABOUT TEXT
@@ -35,7 +39,7 @@ export const AboutText = styled.p`
   margin-bottom: 42px;
 
   @media (min-width: 768px) {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 `;
 
@@ -45,7 +49,7 @@ export const TechContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  animation: present 11s ease-in;
+  animation: present 15s ease-in;
 
   @keyframes present {
     0% {
@@ -63,12 +67,6 @@ export const TechImage = styled.img`
   margin: 6px;
   height: 100px;
   width: 100px;
-
-  &:hover {
-    transition: 0.5 ease-in all;
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
 
   @media (min-width: 768px) {
     margin: 12px;
