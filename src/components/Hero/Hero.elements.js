@@ -9,6 +9,27 @@ export const HeroSection = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
+  animation: showoff 18s ease-in;
+  background: rgb(2, 18, 5);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 18, 5, 0.1) 0%,
+    rgba(0, 16, 3, 1) 100%
+  );
+
+  @keyframes showoff {
+    from {
+      background: transparent;
+    }
+    to {
+      background: rgb(2, 18, 5);
+      background: linear-gradient(
+        180deg,
+        rgba(2, 18, 5, 0.1) 0%,
+        rgba(0, 16, 3, 1) 100%
+      );
+    }
+  }
 `;
 
 export const HeroImage = styled.div`

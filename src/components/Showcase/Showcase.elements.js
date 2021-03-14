@@ -16,7 +16,7 @@ export const ShowcaseHead = styled.h2`
   font-size: 4rem;
   writing-mode: vertical-lr;
   text-orientation: mixed;
-  height: ${({ height }) => `${height}%`};
+  height: 50%;
   background-color: white;
   color: black;
 `;
