@@ -1,6 +1,5 @@
 import React from "react";
 import Typical from "react-typical";
-import Fade from "react-reveal/Fade";
 import {
   AboutSection,
   AboutHead,
@@ -18,27 +17,26 @@ import git from "../../assets/images/git.png";
 const About = ({ load, height }) => {
   return (
     <AboutSection load={load}>
+      <div id="about" />
       <AboutHead height={height}>About</AboutHead>
       <AboutContainer>
         <AboutText>
-          <Fade left>
-            {load ? (
-              <Typical
-                loop={1}
-                wrapper="b"
-                steps={[
-                  "Hi! My name is Edro Gonzales and I am a Full Stack Developer from Vancouver, BC. My goal as a Developer is to create meaningful experiences, here are the technologies that I employ regularly.",
-                  5000,
-                ]}
-              />
-            ) : (
-              <Typical
-                loop={1}
-                wrapper="b"
-                steps={["Thinking about what I want to say...", 5000]}
-              />
-            )}
-          </Fade>
+          {load ? (
+            <Typical
+              loop={1}
+              wrapper="b"
+              steps={[
+                "Hi! My name is Edro Gonzales and I am a Full Stack Developer from Vancouver, BC. My goal as a Developer is to create meaningful experiences, here are the technologies that I employ regularly.",
+                5000,
+              ]}
+            />
+          ) : (
+            <Typical
+              loop={1}
+              wrapper="b"
+              steps={["Thinking about what I want to say...", 5000]}
+            />
+          )}
         </AboutText>
         <TechContainer>
           <TechImage src={javascript} />

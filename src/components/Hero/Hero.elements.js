@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import hero from "../../assets/images/hero.jpg";
+import { Link } from "react-scroll";
 
 export const HeroSection = styled.section`
   height: 100vh;
@@ -9,6 +10,27 @@ export const HeroSection = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
+  animation: showoff 18s ease-in;
+  background: rgb(2, 18, 5);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 18, 5, 0.1) 0%,
+    rgba(0, 16, 3, 1) 100%
+  );
+
+  @keyframes showoff {
+    from {
+      background: transparent;
+    }
+    to {
+      background: rgb(2, 18, 5);
+      background: linear-gradient(
+        180deg,
+        rgba(2, 18, 5, 0.1) 0%,
+        rgba(0, 16, 3, 1) 100%
+      );
+    }
+  }
 `;
 
 export const HeroImage = styled.div`
@@ -49,6 +71,36 @@ export const HeroText = styled.p`
   text-align: center;
   color: white;
   font-size: 2rem;
+`;
+export const HeroButton = styled(Link)`
+  background-color: #b0352d;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 1.25rem;
+  outline: none;
+  position: absolute;
+  bottom: 20%;
+  animation: opacify 15s ease-in;
+
+  @keyframes opacify {
+    0% {
+      opacity: 0;
+    }
+    95% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    transition: 0.3s all ease-in;
+    color: white;
+    background-color: #001003;
+  }
 `;
 
 // BOTTOM INFOSECTION

@@ -6,6 +6,7 @@ import {
   HeroImage,
   TextContainer,
   HeroText,
+  HeroButton,
   InfoContainer,
   InfoLocation,
   InfoCopyright,
@@ -38,6 +39,15 @@ const Hero = ({ load }) => {
             )}
           </HeroText>
         </TextContainer>
+        <HeroButton
+          to="about"
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact="true"
+        >
+          About me
+        </HeroButton>
         <InfoContainer>
           <InfoLocation>Vancouver, BC</InfoLocation>
           <InfoCopyright>
