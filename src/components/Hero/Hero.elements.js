@@ -70,7 +70,11 @@ export const HeroText = styled.p`
   font-weight: 700;
   text-align: center;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 export const HeroButton = styled(Link)`
   background-color: #b0352d;
