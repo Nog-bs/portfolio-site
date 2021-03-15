@@ -15,6 +15,7 @@ import {
 const Hero = ({ load }) => {
   return (
     <>
+      <div id="home" />
       <HeroImage />
       <HeroSection>
         <TextContainer>

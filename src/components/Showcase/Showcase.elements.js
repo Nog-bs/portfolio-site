@@ -4,26 +4,26 @@ import { BsLink } from "react-icons/bs";
 
 export const ShowcaseSection = styled.section`
   display: ${({ load }) => (load ? "flex" : "none")};
+  width: 100%;
+  height: 100vh;
   align-items: center;
   background-color: #001003;
-  width: 100%;
   color: white;
   padding: 42px 0;
-
-  @media (min-width: 768px) {
-    height: 100vh;
-  }
 `;
 
 export const ShowcaseHead = styled.h2`
-  align-self: flex-start;
   padding-top: 12px;
-  font-size: 4rem;
+  font-size: 2rem;
   writing-mode: vertical-lr;
   text-orientation: mixed;
   height: 50%;
   background-color: white;
   color: black;
+
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
 `;
 
 // CARDS STYLING
@@ -37,7 +37,7 @@ export const CardsContainer = styled.div`
 `;
 export const Card = styled.div`
   margin: 6px;
-  height: 40vh;
+  height: 30vh;
   width: 35vw;
   position: relative;
   @media (min-width: 768px) {

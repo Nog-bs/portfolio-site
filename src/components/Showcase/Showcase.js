@@ -19,64 +19,67 @@ import portfolio from "../../assets/images/portfolio-card.JPG";
 
 const Showcase = ({ load, height }) => {
   return (
-    <ShowcaseSection load={load}>
-      <ShowcaseHead height={height}>Portfolio</ShowcaseHead>
-      <CardsContainer>
-        <Fade>
-          <Card>
-            <CardImg img={amaySweets} />
-            <CardTextContainer>
-              <CardHead>Amay Sweets</CardHead>
-              <CardLinkContainer>
-                <CardLinkTo
-                  href="https://github.com/Nog-bs/amay-sweets"
-                  target="_blank"
-                >
-                  <CardGitHub />
-                </CardLinkTo>
-                <CardLinkTo href="https://amay-sweets.com/" target="_blank">
-                  <CardLink />
-                </CardLinkTo>
-              </CardLinkContainer>
-            </CardTextContainer>
-          </Card>
-          <Card>
-            <CardImg img={happyBonsai} />
-            <CardTextContainer>
-              <CardHead>Happy Bonsai</CardHead>
-              <CardLinkContainer>
-                <CardLinkTo
-                  href="https://github.com/Nog-bs/happy-bonsai/"
-                  target="_blank"
-                >
-                  <CardGitHub />
-                </CardLinkTo>
-                <CardLinkTo
-                  href="https://happy-bonsai.netlify.app/"
-                  target="_blank"
-                >
-                  <CardLink />
-                </CardLinkTo>
-              </CardLinkContainer>
-            </CardTextContainer>
-          </Card>
-          <Card>
-            <CardImg img={portfolio} />
-            <CardTextContainer>
-              <CardHead>Portfolio</CardHead>
-              <CardLinkContainer>
-                <CardLinkTo
-                  href="https://github.com/Nog-bs/portfolio-site/"
-                  target="_blank"
-                >
-                  <CardGitHub />
-                </CardLinkTo>
-              </CardLinkContainer>
-            </CardTextContainer>
-          </Card>
-        </Fade>
-      </CardsContainer>
-    </ShowcaseSection>
+    <>
+      <div id="portfolio" />
+      <ShowcaseSection load={load}>
+        <ShowcaseHead height={height}>Portfolio</ShowcaseHead>
+        <CardsContainer>
+          <Fade>
+            <Card>
+              <CardImg img={amaySweets} />
+              <CardTextContainer>
+                <CardHead>Amay Sweets</CardHead>
+                <CardLinkContainer>
+                  <CardLinkTo
+                    href="https://github.com/Nog-bs/amay-sweets"
+                    target="_blank"
+                  >
+                    <CardGitHub />
+                  </CardLinkTo>
+                  <CardLinkTo href="https://amay-sweets.com/" target="_blank">
+                    <CardLink />
+                  </CardLinkTo>
+                </CardLinkContainer>
+              </CardTextContainer>
+            </Card>
+            <Card>
+              <CardImg img={happyBonsai} />
+              <CardTextContainer>
+                <CardHead>Happy Bonsai</CardHead>
+                <CardLinkContainer>
+                  <CardLinkTo
+                    href="https://github.com/Nog-bs/happy-bonsai/"
+                    target="_blank"
+                  >
+                    <CardGitHub />
+                  </CardLinkTo>
+                  <CardLinkTo
+                    href="https://happy-bonsai.netlify.app/"
+                    target="_blank"
+                  >
+                    <CardLink />
+                  </CardLinkTo>
+                </CardLinkContainer>
+              </CardTextContainer>
+            </Card>
+            <Card>
+              <CardImg img={portfolio} />
+              <CardTextContainer>
+                <CardHead>Portfolio</CardHead>
+                <CardLinkContainer>
+                  <CardLinkTo
+                    href="https://github.com/Nog-bs/portfolio-site/"
+                    target="_blank"
+                  >
+                    <CardGitHub />
+                  </CardLinkTo>
+                </CardLinkContainer>
+              </CardTextContainer>
+            </Card>
+          </Fade>
+        </CardsContainer>
+      </ShowcaseSection>
+    </>
   );
 };
 
