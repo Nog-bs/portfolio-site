@@ -23,6 +23,7 @@ export const NavMenu = styled.div`
   align-items: center;
   border-radius: 100%;
   padding: 6px;
+  z-index: 999;
 
   &:hover {
     transition: 0.5s all ease-in;
@@ -38,6 +39,7 @@ export const NavMenuIcon = styled(HiOutlineMenuAlt4)`
 // NAME
 export const NavHeadContainer = styled.div`
   padding: 16px;
+  z-index: 999;
 `;
 export const NavHead = styled.h1`
   font-size: 2rem;
@@ -49,7 +51,7 @@ export const NavContact = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  opacity: 0;
+  z-index: 999;
 `;
 export const NavGitHub = styled(SiGithub)`
   margin-bottom: 8px;
@@ -106,7 +108,7 @@ export const NavModal = styled.div`
   background-color: black;
   z-index: ${({ modal }) => (modal ? 999 : -999)};
   opacity: ${({ modal }) => (modal ? 1 : 0)};
-  display: ${({ modal }) => (modal ? "flex" : "none")};
+  visibility: ${({ modal }) => (modal ? "visible" : "hidden")};
   transition: 0.5s all ease-in;
 `;
 export const ModalContainer = styled.div`

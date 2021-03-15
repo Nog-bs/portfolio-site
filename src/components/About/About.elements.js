@@ -8,10 +8,7 @@ export const AboutSection = styled.section`
   background-color: #001003;
   color: white;
   padding: 42px 0;
-<<<<<<< HEAD
   height: 100vh;
-=======
->>>>>>> e130340d69aa4092f6c183157bc411fbe21bddbc
 `;
 
 export const AboutHead = styled.h2`

@@ -25,20 +25,6 @@ const Navbar = () => {
     <Nav>
       <NavModal modal={modal}>
         <ModalContainer>
-          <Nav>
-            <NavMenu>
-              <ModalIcon onClick={handleModal} />
-            </NavMenu>
-            <NavHeadContainer>
-              <NavHead>Dancer, Developer</NavHead>
-            </NavHeadContainer>
-            <NavContact>
-              <NavLinkedIn />
-              <NavGitHub />
-              <NavEmail />
-              <NavInstagram />
-            </NavContact>
-          </Nav>
           <ModalSelection>
             <ModalLink
               to="home"
@@ -80,7 +66,11 @@ const Navbar = () => {
         </ModalContainer>
       </NavModal>
       <NavMenu>
-        <NavMenuIcon onClick={handleModal} />
+        {modal ? (
+          <ModalIcon onClick={handleModal} />
+        ) : (
+          <NavMenuIcon onClick={handleModal} />
+        )}
       </NavMenu>
       <NavHeadContainer>
         <NavHead>Dancer, Developer</NavHead>
