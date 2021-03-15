@@ -6,10 +6,7 @@ export const AboutSection = styled.section`
   background-color: #001003;
   color: white;
   padding: 42px 0;
-
-  @media (min-width: 768px) {
-    height: 100vh;
-  }
+  height: 100vh;
 `;
 
 export const AboutHead = styled.h2`
