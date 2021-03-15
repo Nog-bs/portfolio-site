@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GlobalStyles from "./GlobalStyles";
-import { Hero, Navbar, About, Showcase } from "./components";
+import { Hero, Navbar, About, Showcase, Footer } from "./components";
 
 const App = () => {
   const [load, setLoad] = useState(false);
@@ -16,6 +16,7 @@ const App = () => {
       <Hero load={load} />
       <About load={load} />
       <Showcase load={load} />
+      <Footer load={load} />
     </>
   );
 };

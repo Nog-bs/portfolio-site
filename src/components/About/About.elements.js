@@ -13,7 +13,6 @@ export const AboutSection = styled.section`
 
 export const AboutHead = styled.h2`
   margin-top: 42px;
-  align-self: flex-start;
   padding-top: 12px;
   font-size: 2rem;
   writing-mode: vertical-lr;

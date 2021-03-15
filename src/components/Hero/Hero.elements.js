@@ -101,6 +101,7 @@ export const HeroButton = styled(Link)`
   }
 
   &:hover {
+    cursor: pointer;
     transition: 0.3s all ease-in;
     color: white;
     background-color: #001003;

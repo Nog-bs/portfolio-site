@@ -24,12 +24,13 @@ export const NavMenu = styled.div`
   border-radius: 100%;
   padding: 6px;
   z-index: 999;
+  color: white;
 
   &:hover {
     transition: 0.5s all ease-in;
+    border-radius: 100%;
     color: black;
     background-color: white;
-    border-radius: 100%;
   }
 `;
 export const NavMenuIcon = styled(HiOutlineMenuAlt4)`
@@ -40,10 +41,20 @@ export const NavMenuIcon = styled(HiOutlineMenuAlt4)`
 export const NavHeadContainer = styled.div`
   padding: 16px;
   z-index: 999;
+
+  &:hover {
+    cursor: pointer;
+    transition: 0.5s ease-in all;
+    color: black;
+  }
 `;
-export const NavHead = styled.h1`
-  font-size: 2rem;
+export const NavHead = styled(Link)`
+  font-size: 1.5rem;
   font-weight: 700;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 // CONTACT
@@ -52,6 +63,9 @@ export const NavContact = styled.div`
   flex-direction: column;
   justify-content: space-between;
   z-index: 999;
+`;
+export const NavLink = styled.a`
+  color: white;
 `;
 export const NavGitHub = styled(SiGithub)`
   margin-bottom: 8px;

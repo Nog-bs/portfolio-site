@@ -6,6 +6,7 @@ import {
   NavHeadContainer,
   NavHead,
   NavContact,
+  NavLink,
   NavLinkedIn,
   NavGitHub,
   NavEmail,
@@ -73,13 +74,26 @@ const Navbar = () => {
         )}
       </NavMenu>
       <NavHeadContainer>
-        <NavHead>Dancer, Developer</NavHead>
+        <NavHead to="home" smooth={true} duration={500} spy={true} exact="true">
+          Dancer, Developer
+        </NavHead>
       </NavHeadContainer>
       <NavContact>
-        <NavLinkedIn />
-        <NavGitHub />
-        <NavEmail />
-        <NavInstagram />
+        <NavLink
+          href="https://www.linkedin.com/in/edrogonzales/"
+          target="_blank"
+        >
+          <NavLinkedIn />
+        </NavLink>
+        <NavLink href="https://github.com/Nog-bs" target="_blank">
+          <NavGitHub />
+        </NavLink>
+        <NavLink href="mailto:edrogonzales@gmail.com" target="_blank">
+          <NavEmail />
+        </NavLink>
+        <NavLink href="https://www.instagram.com/nog.e/" target="_blank">
+          <NavInstagram />
+        </NavLink>
       </NavContact>
     </Nav>
   );

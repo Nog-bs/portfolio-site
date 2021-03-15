@@ -30,10 +30,10 @@ export const ShowcaseHead = styled.h2`
 export const CardsContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  margin-top: 40px;
   width: 100%;
-  @media (min-width: 768px) {
-  }
 `;
 export const Card = styled.div`
   margin: 6px;
