@@ -3,23 +3,32 @@ import styled from "styled-components";
 export const AboutSection = styled.section`
   display: ${({ load }) => (load ? "flex" : "none")};
   width: 100%;
+  height: 100vh;
+  align-items: center;
   background-color: #001003;
   color: white;
   padding: 42px 0;
+<<<<<<< HEAD
   height: 100vh;
+=======
+>>>>>>> e130340d69aa4092f6c183157bc411fbe21bddbc
 `;
 
 export const AboutHead = styled.h2`
   margin-top: 42px;
   align-self: flex-start;
   padding-top: 12px;
-  font-size: 4rem;
+  font-size: 2rem;
   writing-mode: vertical-lr;
   text-orientation: mixed;
   height: 50%;
   background-color: white;
   color: black;
   order: 1;
+
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
 `;
 
 // ABOUT TEXT
@@ -33,6 +42,7 @@ export const AboutContainer = styled.div`
   }
 `;
 export const AboutText = styled.p`
+  font-size: 1.5rem;
   margin-bottom: 42px;
 
   @media (min-width: 768px) {
@@ -62,8 +72,8 @@ export const TechContainer = styled.div`
 `;
 export const TechImage = styled.img`
   margin: 6px;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 
   @media (min-width: 768px) {
     margin: 12px;
