@@ -16,7 +16,21 @@ const GlobalStyles = createGlobalStyle`
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
-} 
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: white; 
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 `;
 
 export default GlobalStyles;
