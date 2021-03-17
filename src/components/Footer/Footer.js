@@ -35,7 +35,7 @@ const Footer = ({ load }) => {
                 </FooterVideoContainer>
                 <FooterContact>
                     <FooterLink
-                        href="emailto:edrogonzales@gmail.com"
+                        href="mailto:edrogonzales@gmail.com"
                         target="_blank"
                     >
                         <FooterEmail />
