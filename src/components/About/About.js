@@ -30,7 +30,7 @@ const About = ({ load, height }) => {
                                 loop={1}
                                 wrapper="b"
                                 steps={[
-                                    "Hi! My name is Edro Gonzales and I am a Full Stack Developer from Vancouver, BC. My goal as a Developer is to create meaningful experiences, here are the technologies that I employ regularly.",
+                                    "Hi! My name is Edro Gonzales and I am a Full Stack Developer from Vancouver, BC. My goal as a Developer is to create online experiences. Here are the technologies that I employ regularly:",
                                     5000,
                                 ]}
                             />
