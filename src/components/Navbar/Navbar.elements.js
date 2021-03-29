@@ -25,6 +25,7 @@ export const NavMenu = styled.div`
     padding: 6px;
     z-index: 999;
     color: white;
+    cursor: pointer;
 
     &:hover {
         transition: 0.5s all ease-in;

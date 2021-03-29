@@ -28,7 +28,7 @@ const About = ({ load, height }) => {
     return (
         <>
             <div id="about" />
-            <AboutSection load={load}>
+            <AboutSection skip={skip} load={load}>
                 <AboutHead height={height}>About</AboutHead>
                 <AboutContainer onClick={handleSkip}>
                     <AboutText>

@@ -10,6 +10,7 @@ export const AboutSection = styled.section`
     padding: 42px 0;
     height: 100vh;
     position: relative;
+    ${({ skip }) => !skip && "cursor: pointer;"};
 `;
 
 export const AboutHead = styled.h2`
@@ -89,6 +90,7 @@ export const AboutButtonContainer = styled.div`
     align-items: center;
     font-size: 0.75rem;
     font-weight: 400;
+    padding: 8px;
 
     ${({ skip }) => !skip && "animation: present 16s ease-in;"}
 
