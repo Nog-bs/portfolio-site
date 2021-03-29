@@ -10,13 +10,13 @@ export const HeroSection = styled.section`
     justify-content: center;
     align-items: center;
     position: relative;
-    animation: showoff 18s ease-in;
     background: rgb(2, 18, 5);
     background: linear-gradient(
         180deg,
         rgba(2, 18, 5, 0.1) 0%,
         rgba(0, 16, 3, 1) 100%
     );
+    ${({ load }) => !load && "animation: showoff 18s ease-in;"}
 
     @keyframes showoff {
         from {
@@ -43,7 +43,7 @@ export const HeroImage = styled.div`
     position: absolute;
     z-index: -1;
 
-    animation: appear 12s ease-in;
+    ${({ load }) => !load && "animation: appear 12s ease-in;"}
 
     @keyframes appear {
         0% {
@@ -88,22 +88,9 @@ export const HeroButton = styled(Link)`
     outline: none;
     position: absolute;
     bottom: 20%;
-    animation: opacify 15s ease-in;
 
     @media (min-width: 768px) {
         width: 15%;
-    }
-
-    @keyframes opacify {
-        0% {
-            opacity: 0;
-        }
-        95% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
     }
 
     &:hover {

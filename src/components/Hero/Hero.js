@@ -12,12 +12,12 @@ import {
     InfoCopyright,
 } from "./Hero.elements";
 
-const Hero = ({ load }) => {
+const Hero = ({ load, handleSkip }) => {
     return (
         <>
             <div id="home" />
-            <HeroImage />
-            <HeroSection>
+            <HeroImage load={load} />
+            <HeroSection load={load}>
                 <TextContainer>
                     <HeroText>
                         {load ? (
@@ -44,15 +44,19 @@ const Hero = ({ load }) => {
                         )}
                     </HeroText>
                 </TextContainer>
-                <HeroButton
-                    to="about"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                >
-                    Start
-                </HeroButton>
+                {load ? (
+                    <HeroButton
+                        to="about"
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact="true"
+                    >
+                        Start
+                    </HeroButton>
+                ) : (
+                    <HeroButton onClick={handleSkip}>Skip</HeroButton>
+                )}
                 <InfoContainer>
                     <InfoLocation>Vancouver, BC</InfoLocation>
                     <InfoCopyright>
