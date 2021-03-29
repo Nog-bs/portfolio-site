@@ -33,6 +33,7 @@ export const AboutContainer = styled.div`
     font-size: 1.75rem;
     padding: 16px;
     margin: 0 auto;
+    height: 80%;
 
     @media (min-width: 768px) {
         width: 70vw;
@@ -53,7 +54,7 @@ export const TechContainer = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    animation: present 15s ease-in;
+    ${({ skip }) => !skip && "animation: present 15s ease-in;"}
 
     @keyframes present {
         0% {
@@ -74,8 +75,8 @@ export const TechImage = styled.img`
 
     @media (min-width: 768px) {
         margin: 12px;
-        height: 175px;
-        width: 175px;
+        height: 100px;
+        width: 100px;
     }
 `;
 // RESUME BUTTON
@@ -89,7 +90,7 @@ export const AboutButtonContainer = styled.div`
     font-size: 0.75rem;
     font-weight: 400;
 
-    animation: present 16s ease-in;
+    ${({ skip }) => !skip && "animation: present 16s ease-in;"}
 
     @keyframes present {
         0% {

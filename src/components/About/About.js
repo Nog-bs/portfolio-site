@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Typical from "react-typical";
 import {
     AboutSection,
@@ -16,44 +16,45 @@ import reactIcon from "../../assets/images/react.png";
 import styledComponents from "../../assets/images/styled-components.png";
 import sass from "../../assets/images/sass.png";
 import git from "../../assets/images/git.png";
+import ts from "../../assets/images/typescript.png";
+import postgre from "../../assets/images/postgre-svg.svg";
+import graphql from "../../assets/images/graphql.png";
 
 const About = ({ load, height }) => {
+    const [skip, setSkip] = useState(false);
+
+    const handleSkip = () => setSkip(true);
+
     return (
         <>
             <div id="about" />
             <AboutSection load={load}>
                 <AboutHead height={height}>About</AboutHead>
-                <AboutContainer>
+                <AboutContainer onClick={handleSkip}>
                     <AboutText>
-                        {load ? (
-                            <Typical
-                                loop={1}
-                                wrapper="b"
-                                steps={[
-                                    "Hi! My name is Edro Gonzales and I am a Full Stack Developer from Vancouver, BC. My goal as a Developer is to create online experiences. Here are the technologies that I employ regularly:",
-                                    5000,
-                                ]}
-                            />
+                        {skip ? (
+                            "Hi! My name is Edro Gonzales and I am a Full Stack Developer from Vancouver, BC. My goal as a Developer currently is to learn a variety of technologies. Here are the technologies that I am currently learning:"
                         ) : (
                             <Typical
-                                loop={1}
-                                wrapper="b"
                                 steps={[
-                                    "Thinking about what I want to say...",
-                                    5000,
+                                    "Hi! My name is Edro Gonzales and I am a Full Stack Developer from Vancouver, BC. My goal as a Developer currently is to learn a variety of technologies. Here are the technologies that I am currently learning:",
+                                    7500,
                                 ]}
                             />
                         )}
                     </AboutText>
-                    <TechContainer>
+                    <TechContainer skip={skip}>
                         <TechImage src={javascript} />
                         <TechImage src={reactIcon} />
                         <TechImage src={styledComponents} />
                         <TechImage src={sass} />
                         <TechImage src={git} />
+                        <TechImage src={ts} />
+                        <TechImage src={postgre} />
+                        <TechImage src={graphql} />
                     </TechContainer>
                 </AboutContainer>
-                <AboutButtonContainer>
+                <AboutButtonContainer skip={skip}>
                     <AboutButtonHead>
                         For more of my stack check out my
                     </AboutButtonHead>

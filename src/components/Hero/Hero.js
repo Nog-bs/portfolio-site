@@ -23,7 +23,7 @@ const Hero = ({ load, handleSkip }) => {
                         {load ? (
                             <Typical
                                 loop={1}
-                                wrapper="b"
+                                wrapper="c"
                                 steps={["Edro Gonzales.", 1000]}
                             />
                         ) : (
