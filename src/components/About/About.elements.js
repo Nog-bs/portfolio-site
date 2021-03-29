@@ -33,7 +33,6 @@ export const AboutContainer = styled.div`
     font-size: 1.75rem;
     padding: 16px;
     margin: 0 auto;
-    height: 80%;
 
     @media (min-width: 768px) {
         width: 70vw;
@@ -42,6 +41,7 @@ export const AboutContainer = styled.div`
 export const AboutText = styled.p`
     font-size: 1.5rem;
     margin: 42px 0;
+    height: 100%;
 
     @media (min-width: 768px) {
         font-size: 2.5rem;
@@ -70,8 +70,8 @@ export const TechContainer = styled.div`
 `;
 export const TechImage = styled.img`
     margin: 6px;
-    height: 80px;
-    width: 80px;
+    height: 10vh;
+    width: 15vw;
 
     @media (min-width: 768px) {
         margin: 12px;

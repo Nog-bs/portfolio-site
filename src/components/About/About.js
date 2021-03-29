@@ -32,16 +32,17 @@ const About = ({ load, height }) => {
                 <AboutHead height={height}>About</AboutHead>
                 <AboutContainer onClick={handleSkip}>
                     <AboutText>
-                        {skip ? (
-                            "Hi! My name is Edro Gonzales and I am a Full Stack Developer from Vancouver, BC. My goal as a Developer currently is to learn a variety of technologies. Here are the technologies that I am currently learning:"
-                        ) : (
-                            <Typical
-                                steps={[
-                                    "Hi! My name is Edro Gonzales and I am a Full Stack Developer from Vancouver, BC. My goal as a Developer currently is to learn a variety of technologies. Here are the technologies that I am currently learning:",
-                                    7500,
-                                ]}
-                            />
-                        )}
+                        {skip
+                            ? "Hi! My name is Edro Gonzales and I am a Full Stack Developer from Vancouver, BC. My goal as a Developer currently is to learn a variety of technologies. Here are the technologies that I am currently learning:"
+                            : load && (
+                                  <Typical
+                                      loop={1}
+                                      steps={[
+                                          "Hi! My name is Edro Gonzales and I am a Full Stack Developer from Vancouver, BC. My goal as a Developer currently is to learn a variety of technologies. Here are the stacks that I am currently learning:",
+                                          20000,
+                                      ]}
+                                  />
+                              )}
                     </AboutText>
                     <TechContainer skip={skip}>
                         <TechImage src={javascript} />
