@@ -42,8 +42,13 @@ export const Card = styled.div`
     position: relative;
     @media (min-width: 768px) {
         margin: 12px;
-        width: 350px;
-        height: 500px;
+        width: 200px;
+        height: 250px;
+    }
+    @media (min-width: 1200px) {
+        margin: 12px;
+        width: 250px;
+        height: 350px;
     }
 `;
 export const CardLinkContainer = styled.div`
@@ -83,7 +88,11 @@ export const CardTextContainer = styled.div`
 `;
 export const CardHead = styled.h3`
     margin: 12px;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+    
+    @media (min-width: 768px) {
+        font-size: 1.75rem;
+    }
 `;
 export const CardImg = styled.div`
     background-image: url(${({ img }) => img});

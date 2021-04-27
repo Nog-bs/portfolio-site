@@ -16,6 +16,8 @@ import {
 import happyBonsai from "../../assets/images/happy-bonsai.JPG";
 import amaySweets from "../../assets/images/amay-sweets.JPG";
 import portfolio from "../../assets/images/portfolio-card.JPG";
+import battleboard from '../../assets/images/battleboard.png';
+import baka from '../../assets/images/baka-list.png';
 
 const Showcase = ({ load, height }) => {
   return (
@@ -72,6 +74,40 @@ const Showcase = ({ load, height }) => {
                     target="_blank"
                   >
                     <CardGitHub />
+                  </CardLinkTo>
+                </CardLinkContainer>
+              </CardTextContainer>
+            </Card>
+            <Card>
+              <CardImg img={battleboard} />
+              <CardTextContainer>
+                <CardHead>Battleboard</CardHead>
+                <CardLinkContainer>
+                  <CardLinkTo
+                    href="https://battle-board-dev.herokuapp.com/"
+                    target="_blank"
+                  >
+                    <CardLink />
+                  </CardLinkTo>
+                </CardLinkContainer>
+              </CardTextContainer>
+            </Card>
+            <Card>
+              <CardImg img={baka} />
+              <CardTextContainer>
+                <CardHead>Baka List</CardHead>
+                <CardLinkContainer>
+                  <CardLinkTo
+                    href="https://github.com/Nog-bs/anime-app/"
+                    target="_blank"
+                  >
+                    <CardGitHub />
+                  </CardLinkTo>
+                  <CardLinkTo
+                    href="https://bakalist.netlify.app/"
+                    target="_blank"
+                  >
+                    <CardLink />
                   </CardLinkTo>
                 </CardLinkContainer>
               </CardTextContainer>
